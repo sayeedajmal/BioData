@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1117.0" style="-fx-border-color: red; -fx-background-color: #81D4FA; -fx-border-insets: 5px; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="471.0" layoutY="50.0" stroke="#18c6c6" strokeType="OUTSIDE" style="-fx-opacity: 0.8;" text="Bio - Data" textAlignment="CENTER" underline="true" wrappingWidth="164.7294921875">
+         <font>
+            <Font name="Georgia Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="39.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PERSONAL INFORMATION:" underline="true">
+         <font>
+            <Font name="Georgia Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label contentDisplay="CENTER" layoutX="50.0" layoutY="223.0" prefHeight="27.0" prefWidth="148.0" text="Name                         :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="203.0" layoutY="226.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Name" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Line endX="-39.63525390625" endY="503.29290771484375" layoutX="593.0" layoutY="191.0" startX="-39.63525390625" startY="-134.4228515625" strokeWidth="3.0" />
+      <Label contentDisplay="CENTER" layoutX="50.0" layoutY="266.0" prefHeight="27.0" prefWidth="148.0" text="Date of Birth          :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="240.0" prefHeight="27.0" prefWidth="148.0" text="Father's Name      :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="55.0" layoutY="309.0" prefHeight="27.0" prefWidth="148.0" text="Address                  :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="-39.63525390625" endY="541.0" fill="#1449e8" layoutX="644.0" layoutY="-68.0" startX="-39.63525390625" startY="318.0" stroke="#1a3bed" strokeWidth="3.0" />
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="200.0" layoutY="312.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Address" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Label contentDisplay="CENTER" layoutX="55.0" layoutY="352.0" prefHeight="27.0" prefWidth="148.0" text="Contact No.           :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="201.0" layoutY="355.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Phone Number" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Label contentDisplay="CENTER" layoutX="48.0" layoutY="398.0" prefHeight="27.0" prefWidth="148.0" text="Contact by Mail     :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="199.0" layoutY="401.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Email" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Label contentDisplay="CENTER" layoutX="50.0" layoutY="442.0" prefHeight="27.0" prefWidth="148.0" text="Nationality             :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="200.0" layoutY="445.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Country" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Label contentDisplay="CENTER" layoutX="55.0" layoutY="489.0" prefHeight="27.0" prefWidth="137.0" text="Occupation           :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="198.0" layoutY="492.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Occupation" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Text layoutX="577.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FAMILY INFORMATION:" underline="true">
+         <font>
+            <Font name="Georgia Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="766.0" layoutY="242.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Father's Name" styleClass="color" stylesheets="@../Style/style.css" />
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="280.0" prefHeight="27.0" prefWidth="148.0" text="Mother's Name     :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="768.0" layoutY="283.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Mother's Name" styleClass="color" stylesheets="@../Style/style.css" />
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="320.0" prefHeight="27.0" prefWidth="148.0" text="Total Brothers       :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox focusColor="#1550ff" labelFloat="true" layoutX="770.0" layoutY="322.0" prefHeight="27.0" prefWidth="137.0" promptText="Total Brothers" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Label contentDisplay="CENTER" layoutX="617.0" layoutY="362.0" prefHeight="27.0" prefWidth="148.0" text="Total Sisters            :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox focusColor="#1550ff" labelFloat="true" layoutX="772.0" layoutY="362.0" prefHeight="27.0" prefWidth="137.0" promptText="Total Sisters" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="BLACK" />
+      <Label contentDisplay="CENTER" layoutX="617.0" layoutY="403.0" prefHeight="27.0" prefWidth="148.0" text="Brother's Name     :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="771.0" layoutY="406.0" prefHeight="26.0" prefWidth="308.0" promptText="[Married Brother's Name]" styleClass="color" stylesheets="@../Style/style.css" />
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="445.0" prefHeight="27.0" prefWidth="148.0" text="Sister's Name         :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#295cf5" labelFloat="true" layoutX="772.0" layoutY="448.0" prefHeight="26.0" prefWidth="308.0" promptText="[Married Sister's Name]" styleClass="color" stylesheets="@../Style/style.css" />
+      <Line endX="-39.63525390625" endY="606.0" fill="#1449e8" layoutX="78.0" layoutY="-89.0" startX="-39.63525390625" startY="318.0" stroke="#1a36ed" strokeWidth="3.0" />
+      <JFXDatePicker defaultColor="#ff4c1c" editable="false" layoutX="202.0" layoutY="267.0" prefHeight="29.0" prefWidth="231.0" promptText="Enter Your Birth Date" showWeekNumbers="true" styleClass="color" stylesheets="@../Style/style.css" />
+   </children>
+</AnchorPane>
