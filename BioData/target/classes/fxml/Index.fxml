@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1117.0" style="-fx-border-color: red; -fx-background-color: #B0BEC5; -fx-border-insets: 5px; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biodata.IndexController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1117.0" style="-fx-border-color: red; -fx-background-color: #B0BEC5; -fx-border-insets: 5px; -fx-border-radius: 10px;" styleClass="color" stylesheets="@../Style/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biodata.IndexController">
    <children>
       <Text fontSmoothingType="LCD" layoutX="471.0" layoutY="50.0" stroke="#18c6c6" strokeType="OUTSIDE" style="-fx-opacity: 0.8;" text="Bio - Data" textAlignment="CENTER" underline="true" wrappingWidth="164.7294921875">
          <font>
@@ -153,5 +153,10 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
+      <Label fx:id="output" alignment="CENTER" layoutX="356.0" layoutY="631.0" prefHeight="34.0" prefWidth="395.0" styleClass="output" stylesheets="@../Style/style.css" textFill="#2368f2" wrapText="true">
+         <font>
+            <Font name="DejaVu Sans Bold" size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
