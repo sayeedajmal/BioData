@@ -1,9 +1,15 @@
 package com.biodata;
 
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -13,6 +19,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class IndexController implements Initializable {
@@ -30,6 +37,7 @@ public class IndexController implements Initializable {
     public JFXTextField mother = new JFXTextField();
     public JFXTextField brother = new JFXTextField();
     public JFXTextField sister = new JFXTextField();
+    public Label output;
 
     /* Nation Data */
     ObservableList<String> listnation = FXCollections.observableArrayList("India", "Pakistan", "Bangladesh", "Nepal",
@@ -44,8 +52,44 @@ public class IndexController implements Initializable {
             14, 15, 16);
 
     @FXML
-    public void create() throws IOException {
-        FileWriter fWriter = new FileWriter(name.getText().toString() + ".txt");
+    public void create() throws IOException, DocumentException, InterruptedException {
+
+        /* CREATING FILE WITH .TXT EXTENSION */
+        if (name.getText().isBlank() == false && address.getText().isBlank() == false
+                && phone.getText().isBlank() == false && email.getText().isBlank() == false
+                && occupation.getText().isBlank() == false && father.getText().isBlank() == false
+                && mother.getText().isBlank() == false && brother.getText().isBlank() == false
+                && sister.getText().isBlank() == false && nation.getValue().isBlank() == false
+                && !dateofbirth.toString().isBlank()) {
+            FileWriter fWriter = new FileWriter(name.getText().toString() + ".txt", true);
+            fWriter.append("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
+                    + "Date of Birth : " + dateofbirth.getValue() + "\n" + "Address :" + address.getText() + "\n"
+                    + "Phone : " + phone.getText() + "\n" + "Nationality : " + nation.getValue() + "\n" + "Email : "
+                    + email.getText() + "\n" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
+                    + "\t\t\t\t FAMILY INFORMATION " + "\n\n" + "Father's Name: " + father.getText() + "\n"
+                    + "Mother's Name : " + mother.getText() + "\n" + "Married Brother(s) : " + brother.getText() + "\n"
+                    + "Married Sister(s) : " + sister.getText());
+            fWriter.close();
+            /* CREATING PDF FILE WITH .PDF EXTENSION */
+            Document document = new Document(PageSize.A4, 20, 20, 20, 20);
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(name.getText() + ".pdf"));
+            document.open();
+            document.add(new Paragraph("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
+                    + "Date of Birth : " + dateofbirth.getValue() + "\n" + "Address :" + address.getText() + "\n"
+                    + "Phone : " + phone.getText() + "\n" + "Nationality" + nation.getValue() + "\n" + "Email : "
+                    + email.getText() + "\n" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
+                    + "\t\t\t\t FAMILY INFORMATION " + "\n\n" + "Father's Name: " + father.getText() + "\n"
+                    + "Mother's Name" + mother.getText() + "\n" + "Married Brother(s) : " + brother.getText() + "\n"
+                    + "Married Sister(s) : " + sister.getText()));
+            document.close();
+            pdfWriter.close();
+            output.setText("BioData of " + name.getText() + " is Created Sucessfully 💓");
+            /* Clearing Filled Text */
+            clear();
+        } else {
+            output.setText("Fill All Fields !!!");
+        }
+
     }
 
     @FXML
