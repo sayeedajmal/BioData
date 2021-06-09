@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -74,14 +75,17 @@ public class IndexController implements Initializable {
             Document document = new Document(PageSize.A4, 20, 20, 20, 20);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(name.getText() + ".pdf"));
             document.open();
-            document.add(new Paragraph("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
+            Paragraph para = new Paragraph("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
                     + "Date of Birth : " + dateofbirth.getValue() + "\n" + "Address :" + address.getText() + "\n"
                     + "Phone : " + phone.getText() + "\n" + "Nationality" + nation.getValue() + "\n" + "Email : "
                     + email.getText() + "\n" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
                     + "\t\t\t\t FAMILY INFORMATION " + "\n\n" + "Father's Name: " + father.getText() + "\n"
                     + "Mother's Name" + mother.getText() + "\n" + "Married Brother(s) : " + brother.getText() + "\n"
-                    + "Married Sister(s) : " + sister.getText()));
+                    + "Married Sister(s) : " + sister.getText());
+            para.setAlignment(Element.ALIGN_CENTER);
+            document.add(para);
             document.close();
+
             pdfWriter.close();
             output.setText("BioData of " + name.getText() + " is Created Sucessfully 💓");
             /* Clearing Filled Text */
