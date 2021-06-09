@@ -1,10 +1,12 @@
 package com.biodata;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
@@ -14,6 +16,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -56,24 +59,27 @@ public class IndexController implements Initializable {
     public void create() throws IOException, DocumentException, InterruptedException {
 
         /* CREATING FILE WITH .TXT EXTENSION */
+        String path = System.getProperty("user.home") + File.separator + "Desktop";
+        path += File.separator + name.getText().toString();
+        File file = new File(path + ".txt");
         if (name.getText().isBlank() == false && address.getText().isBlank() == false
                 && phone.getText().isBlank() == false && email.getText().isBlank() == false
                 && occupation.getText().isBlank() == false && father.getText().isBlank() == false
                 && mother.getText().isBlank() == false && brother.getText().isBlank() == false
                 && sister.getText().isBlank() == false && nation.getValue().isBlank() == false
                 && !dateofbirth.toString().isBlank()) {
-            FileWriter fWriter = new FileWriter(name.getText().toString() + ".txt", true);
-            fWriter.append("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
-                    + "Date of Birth : " + dateofbirth.getValue() + "\n" + "Address :" + address.getText() + "\n"
+            FileWriter fWriter = new FileWriter(file, true);
+            fWriter.append("\t\t\t\t PERSONAL INFORMATION" + "\n\n\t\t" + "Name :" + name.getText() + "\n\t\t"
+                    + "Date of Birth : " + dateofbirth.getValue() + "\n\t\t" + "Address :" + address.getText() + "\n\t\t"
                     + "Phone : " + phone.getText() + "\n" + "Nationality : " + nation.getValue() + "\n" + "Email : "
-                    + email.getText() + "\n" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
-                    + "\t\t\t\t FAMILY INFORMATION " + "\n\n" + "Father's Name: " + father.getText() + "\n"
-                    + "Mother's Name : " + mother.getText() + "\n" + "Married Brother(s) : " + brother.getText() + "\n"
+                    + email.getText() + "\n\t\t" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
+                    + "\t\t\t\t FAMILY INFORMATION " + "\n\n\t\t" + "Father's Name: " + father.getText() + "\n\t\t"
+                    + "Mother's Name : " + mother.getText() + "\n\t\t" + "Married Brother(s) : " + brother.getText() + "\n\t\t"
                     + "Married Sister(s) : " + sister.getText());
             fWriter.close();
             /* CREATING PDF FILE WITH .PDF EXTENSION */
             Document document = new Document(PageSize.A4, 20, 20, 20, 20);
-            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(name.getText() + ".pdf"));
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(path + ".pdf"));
             document.open();
             Paragraph para = new Paragraph("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
                     + "Date of Birth : " + dateofbirth.getValue() + "\n" + "Address :" + address.getText() + "\n"
