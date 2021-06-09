@@ -10,4 +10,4 @@
 
 ## Location! Where File Located?
 
-- PDF & Text File will Created Where Your Application Will Installed.
+- PDF & Text File will Created in Desktop Folder
