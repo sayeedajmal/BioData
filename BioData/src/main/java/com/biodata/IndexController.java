@@ -29,8 +29,8 @@ import javafx.stage.Stage;
 public class IndexController implements Initializable {
     /* <=====================================> */
     public JFXComboBox<String> nation;
-    public JFXComboBox<Integer> totalbrothers;
-    public JFXComboBox<Integer> totalsisters;
+    public JFXComboBox<Integer> totalbrothers = new JFXComboBox<>();
+    public JFXComboBox<Integer> totalsisters = new JFXComboBox<>();
     public JFXDatePicker dateofbirth = new JFXDatePicker();
     public JFXTextField name = new JFXTextField();
     public JFXTextField address = new JFXTextField();
@@ -70,12 +70,14 @@ public class IndexController implements Initializable {
                 && !dateofbirth.toString().isBlank()) {
             FileWriter fWriter = new FileWriter(file, true);
             fWriter.append("\t\t\t\t PERSONAL INFORMATION" + "\n\n\t\t" + "Name :" + name.getText() + "\n\t\t"
-                    + "Date of Birth : " + dateofbirth.getValue() + "\n\t\t" + "Address :" + address.getText() + "\n\t\t"
-                    + "Phone : " + phone.getText() + "\n" + "Nationality : " + nation.getValue() + "\n" + "Email : "
-                    + email.getText() + "\n\t\t" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
-                    + "\t\t\t\t FAMILY INFORMATION " + "\n\n\t\t" + "Father's Name: " + father.getText() + "\n\t\t"
-                    + "Mother's Name : " + mother.getText() + "\n\t\t" + "Married Brother(s) : " + brother.getText() + "\n\t\t"
-                    + "Married Sister(s) : " + sister.getText());
+                    + "Date of Birth : " + dateofbirth.getValue() + "\n\t\t" + "Address :" + address.getText()
+                    + "\n\t\t" + "Phone : " + phone.getText() + "\n\t\t" + "Nationality : " + nation.getValue()
+                    + "\n\t\t" + "Email : " + email.getText() + "\n\t\t" + "Occupation : " + occupation.getText()
+                    + "\n\n" + "\t\t\t\t FAMILY INFORMATION " + "\n\n\t\t" + "Father's Name: " + father.getText()
+                    + "\n\t\t" + "Mother's Name : " + mother.getText() + "\n\t\t" + "Total Brother(s): "
+                    + totalbrothers.getValue() + "\n\t\t" + "Total Sister(s): " + totalsisters.getValue()
+                    + "Married Brother(s) : " + brother.getText() + "\n\t\t" + "Married Sister(s) : "
+                    + sister.getText());
             fWriter.close();
             /* CREATING PDF FILE WITH .PDF EXTENSION */
             Document document = new Document(PageSize.A4, 20, 20, 20, 20);
@@ -83,11 +85,12 @@ public class IndexController implements Initializable {
             document.open();
             Paragraph para = new Paragraph("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
                     + "Date of Birth : " + dateofbirth.getValue() + "\n" + "Address :" + address.getText() + "\n"
-                    + "Phone : " + phone.getText() + "\n" + "Nationality" + nation.getValue() + "\n" + "Email : "
+                    + "Phone : " + phone.getText() + "\n" + "Nationality: " + nation.getValue() + "\n" + "Email : "
                     + email.getText() + "\n" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
                     + "\t\t\t\t FAMILY INFORMATION " + "\n\n" + "Father's Name: " + father.getText() + "\n"
-                    + "Mother's Name" + mother.getText() + "\n" + "Married Brother(s) : " + brother.getText() + "\n"
-                    + "Married Sister(s) : " + sister.getText());
+                    + "Mother's Name : " + mother.getText() + "\n\t\t" + "Total Brother(s): " + totalbrothers.getValue()
+                    + "\n\t\t" + "Total Sister(s): " + totalsisters.getValue() + "\n\t\t" + "Married Brother(s) : "
+                    + brother.getText() + "\n\t\t" + "Married Sister(s) : " + sister.getText());
             para.setAlignment(Element.ALIGN_CENTER);
             document.add(para);
             document.close();

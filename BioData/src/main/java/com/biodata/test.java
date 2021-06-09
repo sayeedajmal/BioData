@@ -8,7 +8,6 @@ public class test {
         String path = System.getProperty("user.home") + File.separator + "Desktop";
         path += File.separator + "Test.txt";
         File file = new File(path);
-
         if (file.exists()) {
             System.out.println(file + " already exists");
         } else if (file.createNewFile()) {
