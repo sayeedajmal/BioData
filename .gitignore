@@ -1,4 +1,5 @@
 /.vscode
 /BioData.jar
 /BioData/target
+/BioData/target/classes
 BioData.jar
