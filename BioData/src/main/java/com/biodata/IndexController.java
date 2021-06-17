@@ -80,7 +80,7 @@ public class IndexController implements Initializable {
                     + sister.getText());
             fWriter.close();
             /* CREATING PDF FILE WITH .PDF EXTENSION */
-            Document document = new Document(PageSize.A4, 20, 20, 20, 20);
+            Document document = new Document(PageSize.POSTCARD, 20, 20, 20, 20);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(path + ".pdf"));
             document.open();
             Paragraph para = new Paragraph("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
