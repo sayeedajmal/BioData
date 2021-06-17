@@ -18,8 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<GridPane prefHeight="711.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biodata.IndexController">
+<GridPane prefHeight="666.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biodata.IndexController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -27,7 +26,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1152.0" style="-fx-border-color: red; -fx-background-color: #4FC3F7; -fx-border-insets: 5px; -fx-border-radius: 10px;" styleClass="color" stylesheets="@../Style/style.css">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1120.0" style="-fx-border-color: red; -fx-background-color: #4FC3F7; -fx-border-insets: 5px; -fx-border-radius: 10px;" styleClass="color" stylesheets="@../Style/style.css">
          <children>
             <Text fill="WHITE" fontSmoothingType="LCD" layoutX="461.0" layoutY="61.0" stroke="#186a94" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-opacity: 0.8;" text="Bio - Data" textAlignment="CENTER" underline="true" wrappingWidth="186.7294921875">
                <font>
@@ -158,7 +157,7 @@
                   <Cursor fx:constant="CLOSED_HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton alignment="CENTER" buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="CENTER" layoutX="1067.0" layoutY="28.0" onAction="#close" prefHeight="26.0" prefWidth="15.0" ripplerFill="RED" style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+            <JFXButton alignment="CENTER" buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="CENTER" layoutX="1028.0" layoutY="28.0" onAction="#close" prefHeight="26.0" prefWidth="15.0" ripplerFill="RED" style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>

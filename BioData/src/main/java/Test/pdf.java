@@ -1,5 +1,6 @@
 package Test;
 
+import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
@@ -20,7 +21,7 @@ public class pdf {
 
     protected void manipulatePdf(String dest) throws IOException {
         PdfDocument pdfDoc = new PdfDocument(new PdfWriter(dest));
-        Document doc = new Document(pdfDoc);
+        Document doc = new Document(pdfDoc, PageSize.EXECUTIVE);
         Paragraph p = new Paragraph("Text to the left");
         p.add(new Tab());
         p.addTabStops(new TabStop(1000, TabAlignment.RIGHT));

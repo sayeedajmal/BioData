@@ -86,7 +86,7 @@ public class IndexController implements Initializable {
             Paragraph para = new Paragraph("\t\t\t\t PERSONAL INFORMATION" + "\n\n" + "Name :" + name.getText() + "\n"
                     + "Date of Birth : " + dateofbirth.getValue() + "\n" + "Address :" + address.getText() + "\n"
                     + "Phone : " + phone.getText() + "\n" + "Nationality: " + nation.getValue() + "\n" + "Email : "
-                    + email.getText() + "\n" + "Occupation : " + occupation.getText() + "\n\n\n\n\n"
+                    + email.getText() + "\n" + "Occupation : " + occupation.getText() + "\n\n"
                     + "\t\t\t\t FAMILY INFORMATION " + "\n\n" + "Father's Name: " + father.getText() + "\n"
                     + "Mother's Name : " + mother.getText() + "\n\t\t" + "Total Brother(s): " + totalbrothers.getValue()
                     + "\n\t\t" + "Total Sister(s): " + totalsisters.getValue() + "\n\t\t" + "Married Brother(s) : "
