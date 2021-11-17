@@ -11,170 +11,157 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane prefHeight="666.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biodata.IndexController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1120.0" style="-fx-border-color: red; -fx-background-color: #4FC3F7; -fx-border-insets: 5px; -fx-border-radius: 10px;" styleClass="color" stylesheets="@../Style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.biodata.IndexController">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1120.0" style="-fx-border-color: red; -fx-background-color: #4FC3F7; -fx-border-insets: 5px; -fx-border-radius: 10px;" styleClass="color" stylesheets="@../Style/style.css">
-         <children>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="461.0" layoutY="61.0" stroke="#186a94" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-opacity: 0.8;" text="Bio - Data" textAlignment="CENTER" underline="true" wrappingWidth="186.7294921875">
-               <font>
-                  <Font name="Lato Black" size="37.0" />
-               </font>
-               <effect>
-                  <Glow level="0.67" />
-               </effect>
-            </Text>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="39.0" layoutY="141.0" stroke="#ff0404" strokeType="OUTSIDE" strokeWidth="0.5" text="PERSONAL INFORMATION:" underline="true">
-               <font>
-                  <Font name="Lato Medium" size="17.0" />
-               </font>
-            </Text>
-            <Label contentDisplay="CENTER" layoutX="48.0" layoutY="223.0" prefHeight="27.0" prefWidth="148.0" text="Name                   :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="name" focusColor="#295cf5" labelFloat="true" layoutX="203.0" layoutY="226.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Name" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Line endX="-39.63525390625" endY="350.0" layoutX="593.0" layoutY="191.0" startX="-39.63525390625" startY="-21.0" strokeWidth="3.0" />
-            <Label contentDisplay="CENTER" layoutX="50.0" layoutY="266.0" prefHeight="27.0" prefWidth="148.0" text="Date of Birth        :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXDatePicker fx:id="dateofbirth" defaultColor="#1ddac7" editable="false" layoutX="201.0" layoutY="265.0" prefHeight="33.0" prefWidth="221.0" promptText="Pickout Date of Birth" showWeekNumbers="true" styleClass="color" stylesheets="@../Style/style.css">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXDatePicker>
-            <Label contentDisplay="CENTER" layoutX="618.0" layoutY="240.0" prefHeight="27.0" prefWidth="148.0" text="Father's Name      :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label contentDisplay="CENTER" layoutX="47.0" layoutY="309.0" prefHeight="27.0" prefWidth="148.0" text="Address                :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <Line endX="-39.63525390625" endY="541.0" fill="#1449e8" layoutX="644.0" layoutY="-68.0" startX="-39.63525390625" startY="318.0" stroke="#1a3bed" strokeDashOffset="7.0" strokeWidth="3.0" />
-            <JFXTextField fx:id="address" focusColor="#295cf5" labelFloat="true" layoutX="200.0" layoutY="312.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Address" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="44.0" layoutY="352.0" prefHeight="27.0" prefWidth="148.0" text="Contact No.           :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="phone" focusColor="#295cf5" labelFloat="true" layoutX="201.0" layoutY="355.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Phone Number" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="43.0" layoutY="398.0" prefHeight="27.0" prefWidth="148.0" text="Contact by Mail     :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="email" focusColor="#295cf5" labelFloat="true" layoutX="199.0" layoutY="401.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Email" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="44.0" layoutY="442.0" prefHeight="27.0" prefWidth="148.0" text="Nationality            :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXComboBox fx:id="nation" focusColor="#1550ff" labelFloat="true" layoutX="199.0" layoutY="444.0" prefHeight="27.0" prefWidth="231.0" promptText="Nation" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="44.0" layoutY="489.0" prefHeight="27.0" prefWidth="148.0" text=" Occupation          :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="occupation" focusColor="#295cf5" labelFloat="true" layoutX="198.0" layoutY="492.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Occupation" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Text fill="WHITE" layoutX="574.0" layoutY="141.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.5" text="FAMILY INFORMATION:" underline="true">
-               <font>
-                  <Font name="Lato Medium" size="17.0" />
-               </font>
-            </Text>
-            <JFXTextField fx:id="father" focusColor="#295cf5" labelFloat="true" layoutX="766.0" layoutY="242.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Father's Name" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="618.0" layoutY="280.0" prefHeight="27.0" prefWidth="148.0" text="Mother's Name     :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="mother" focusColor="#295cf5" labelFloat="true" layoutX="768.0" layoutY="283.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Mother's Name" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="618.0" layoutY="320.0" prefHeight="27.0" prefWidth="148.0" text="Total Brothers       :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXComboBox fx:id="totalbrothers" focusColor="#1550ff" labelFloat="true" layoutX="770.0" layoutY="322.0" prefHeight="27.0" prefWidth="137.0" promptText="Total Brothers" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="617.0" layoutY="362.0" prefHeight="27.0" prefWidth="148.0" text="Total Sisters          :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXComboBox fx:id="totalsisters" focusColor="#1550ff" labelFloat="true" layoutX="772.0" layoutY="362.0" prefHeight="27.0" prefWidth="137.0" promptText="Total Sisters" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="617.0" layoutY="403.0" prefHeight="27.0" prefWidth="148.0" text="Brother's Name     :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="brother" focusColor="#295cf5" labelFloat="true" layoutX="771.0" layoutY="406.0" prefHeight="26.0" prefWidth="308.0" promptText="[Married Brother's Name]" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Label contentDisplay="CENTER" layoutX="618.0" layoutY="445.0" prefHeight="27.0" prefWidth="148.0" text="Sister's Name        :" textAlignment="CENTER">
-               <font>
-                  <Font name="Georgia Bold" size="15.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="sister" focusColor="#295cf5" labelFloat="true" layoutX="772.0" layoutY="448.0" prefHeight="26.0" prefWidth="308.0" promptText="[Married Sister's Name]" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
-            <Line endX="-39.63525390625" endY="606.0" fill="#1449e8" layoutX="78.0" layoutY="-89.0" startX="-39.63525390625" startY="318.0" stroke="#1a36ed" strokeWidth="3.0" />
-            <Label alignment="CENTER" layoutX="14.0" layoutY="665.0" text="Made by Sayeed Ajmal" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Liberation Sans Bold Italic" size="17.0" />
-               </font>
-               <effect>
-                  <Reflection />
-               </effect>
-            </Label>
-            <JFXButton alignment="CENTER" buttonType="RAISED" defaultButton="true" layoutX="640.0" layoutY="558.0" onAction="#create" prefHeight="41.0" prefWidth="72.0" ripplerFill="#06ae2e" style="-fx-background-color: green;" text="Create" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Lato Heavy" size="16.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor>
-            </JFXButton>
-            <Line endX="-410.0" endY="166.7730712890625" layoutX="732.0" layoutY="375.0" startX="49.0" startY="166.7730712890625" strokeWidth="3.0" />
-            <Line endX="-410.0" endY="166.7730712890625" layoutX="735.0" layoutY="3.0" startX="49.0" startY="166.7730712890625" strokeWidth="3.0" />
-            <JFXButton alignment="CENTER" buttonType="RAISED" cancelButton="true" layoutX="338.0" layoutY="558.0" onAction="#clear" prefHeight="41.0" prefWidth="72.0" ripplerFill="#06ae2e" style="-fx-background-color: red;" text="Clear" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Lato Heavy" size="17.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="CLOSED_HAND" />
-               </cursor>
-            </JFXButton>
-            <JFXButton alignment="CENTER" buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="CENTER" layoutX="1028.0" layoutY="28.0" onAction="#close" prefHeight="26.0" prefWidth="15.0" ripplerFill="RED" style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
-               <graphic>
-                  <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/cancel.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <Label fx:id="output" alignment="CENTER" layoutX="356.0" layoutY="631.0" prefHeight="34.0" prefWidth="395.0" styleClass="output" stylesheets="@../Style/style.css" textFill="#2368f2" wrapText="true">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="16.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="461.0" layoutY="61.0" stroke="#186a94" strokeType="OUTSIDE" strokeWidth="2.0" style="-fx-opacity: 0.8;" text="Bio - Data" textAlignment="CENTER" underline="true" wrappingWidth="186.7294921875">
+         <font>
+            <Font name="Lato Black" size="37.0" />
+         </font>
+         <effect>
+            <Glow level="0.67" />
+         </effect>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="39.0" layoutY="141.0" text="PERSONAL INFORMATION:" underline="true">
+         <font>
+            <Font name="Lato Medium" size="19.0" />
+         </font>
+      </Text>
+      <Label contentDisplay="CENTER" layoutX="48.0" layoutY="223.0" prefHeight="27.0" prefWidth="148.0" text="Name                   :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="name" focusColor="#295cf5" labelFloat="true" layoutX="203.0" layoutY="226.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Name" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Line endX="-39.63525390625" endY="350.0" layoutX="593.0" layoutY="191.0" startX="-39.63525390625" startY="-21.0" strokeWidth="3.0" />
+      <Label contentDisplay="CENTER" layoutX="50.0" layoutY="266.0" prefHeight="27.0" prefWidth="148.0" text="Date of Birth        :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="dateofbirth" defaultColor="#1ddac7" editable="false" layoutX="201.0" layoutY="265.0" prefHeight="33.0" prefWidth="221.0" promptText="Pickout Date of Birth" showWeekNumbers="true" styleClass="color" stylesheets="@../Style/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXDatePicker>
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="240.0" prefHeight="27.0" prefWidth="148.0" text="Father's Name      :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="47.0" layoutY="309.0" prefHeight="27.0" prefWidth="148.0" text="Address                :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="-39.63525390625" endY="541.0" fill="#1449e8" layoutX="644.0" layoutY="-68.0" startX="-39.63525390625" startY="318.0" stroke="#1a3bed" strokeDashOffset="7.0" strokeWidth="3.0" />
+      <JFXTextField fx:id="address" focusColor="#295cf5" labelFloat="true" layoutX="200.0" layoutY="312.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Address" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="44.0" layoutY="352.0" prefHeight="27.0" prefWidth="148.0" text="Contact No.           :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="phone" focusColor="#295cf5" labelFloat="true" layoutX="201.0" layoutY="355.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Phone Number" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="43.0" layoutY="398.0" prefHeight="27.0" prefWidth="148.0" text="Contact by Mail     :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="email" focusColor="#295cf5" labelFloat="true" layoutX="199.0" layoutY="401.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Email" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="44.0" layoutY="442.0" prefHeight="27.0" prefWidth="148.0" text="Nationality            :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="nation" focusColor="#1550ff" labelFloat="true" layoutX="199.0" layoutY="444.0" prefHeight="27.0" prefWidth="231.0" promptText="Nation" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="44.0" layoutY="489.0" prefHeight="27.0" prefWidth="148.0" text=" Occupation          :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="occupation" focusColor="#295cf5" labelFloat="true" layoutX="198.0" layoutY="492.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Occupation" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Text fill="WHITE" layoutX="574.0" layoutY="141.0" text="FAMILY INFORMATION:" underline="true">
+         <font>
+            <Font name="Lato Medium" size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="father" focusColor="#295cf5" labelFloat="true" layoutX="766.0" layoutY="242.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Father's Name" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="280.0" prefHeight="27.0" prefWidth="148.0" text="Mother's Name     :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="mother" focusColor="#295cf5" labelFloat="true" layoutX="768.0" layoutY="283.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Your Mother's Name" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="320.0" prefHeight="27.0" prefWidth="148.0" text="Total Brothers       :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="totalbrothers" focusColor="#1550ff" labelFloat="true" layoutX="770.0" layoutY="322.0" prefHeight="27.0" prefWidth="137.0" promptText="Total Brothers" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="617.0" layoutY="362.0" prefHeight="27.0" prefWidth="148.0" text="Total Sisters          :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="totalsisters" focusColor="#1550ff" labelFloat="true" layoutX="772.0" layoutY="362.0" prefHeight="27.0" prefWidth="137.0" promptText="Total Sisters" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="617.0" layoutY="403.0" prefHeight="27.0" prefWidth="148.0" text="Brother's Name     :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="brother" focusColor="#295cf5" labelFloat="true" layoutX="771.0" layoutY="406.0" prefHeight="26.0" prefWidth="308.0" promptText="[Married Brother's Name]" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Label contentDisplay="CENTER" layoutX="618.0" layoutY="445.0" prefHeight="27.0" prefWidth="148.0" text="Sister's Name        :" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="sister" focusColor="#295cf5" labelFloat="true" layoutX="772.0" layoutY="448.0" prefHeight="26.0" prefWidth="308.0" promptText="[Married Sister's Name]" styleClass="color" stylesheets="@../Style/style.css" unFocusColor="RED" />
+      <Line endX="-39.63525390625" endY="606.0" fill="#1449e8" layoutX="78.0" layoutY="-89.0" startX="-39.63525390625" startY="318.0" stroke="#1a36ed" strokeWidth="3.0" />
+      <Label alignment="CENTER" layoutX="30.0" layoutY="621.0" text="Made by Sayeed Ajmal" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Liberation Sans Bold Italic" size="17.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" defaultButton="true" layoutX="640.0" layoutY="558.0" onAction="#create" prefHeight="41.0" prefWidth="72.0" ripplerFill="#06ae2e" style="-fx-background-color: green;" text="Create" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Lato Heavy" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="-410.0" endY="166.7730712890625" layoutX="732.0" layoutY="375.0" startX="49.0" startY="166.7730712890625" strokeWidth="3.0" />
+      <Line endX="-410.0" endY="166.7730712890625" layoutX="735.0" layoutY="3.0" startX="49.0" startY="166.7730712890625" strokeWidth="3.0" />
+      <JFXButton alignment="CENTER" buttonType="RAISED" cancelButton="true" layoutX="338.0" layoutY="558.0" onAction="#clear" prefHeight="41.0" prefWidth="72.0" ripplerFill="#06ae2e" style="-fx-background-color: red;" text="Clear" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Lato Heavy" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="CENTER" layoutX="1057.0" layoutY="14.0" onAction="#close" prefHeight="3.0" prefWidth="3.0" ripplerFill="RED" style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="output" alignment="CENTER" layoutX="356.0" layoutY="631.0" prefHeight="34.0" prefWidth="395.0" styleClass="output" stylesheets="@../Style/style.css" textFill="#2368f2" wrapText="true">
+         <font>
+            <Font name="DejaVu Sans Bold" size="16.0" />
+         </font>
+      </Label>
    </children>
-</GridPane>
+</AnchorPane>
