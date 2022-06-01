@@ -56,7 +56,7 @@ public class IndexController implements Initializable {
             14, 15, 16);
 
     @FXML
-    public void create(String username) throws IOException, DocumentException, InterruptedException {
+    public void create() throws IOException, DocumentException, InterruptedException {
         /* CREATING FILE WITH .TXT EXTENSION */
         String path = System.getProperty("user.home") + File.separator + "Desktop";
         path += File.separator + name.getText().toString();

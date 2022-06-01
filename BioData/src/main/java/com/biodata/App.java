@@ -19,6 +19,8 @@ public class App extends Application {
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/Style/style.css");
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.setFullScreen(false);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
     }
